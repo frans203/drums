@@ -1,6 +1,14 @@
 document.body.addEventListener("keyup", (e) => {
   playSound(e.code.toLowerCase());
 });
+const keys = document.querySelector(".keys");
+
+keys.addEventListener("click", (e) => {
+  console.log(e.target.dataset.key);
+  if (e.target.dataset.key) {
+    playSound(e.target.dataset.key);
+  }
+});
 
 document.querySelector(".composer button").addEventListener("click", (e) => {
   let song = document.querySelector("#input").value;

@@ -11,6 +11,30 @@ body {
   flex-direction: column;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 71, 71, 1) 78%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  background-size: 300%;
+  animation: animate 6s ease-in infinite alternate;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 25% 25%;
+  }
+  75% {
+    background-position: 55% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 h1 {
@@ -35,8 +59,9 @@ h1 {
   cursor: pointer;
 }
 .key.active {
-  border: 2px solid #ff0;
-  color: #ff0;
+  border: 6px solid rgb(17, 0, 255);
+  color: rgb(17, 0, 255);
+  font-size: 35px;
 }
 
 .composer {
